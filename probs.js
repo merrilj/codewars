@@ -1,11 +1,11 @@
 // function that checks to see if parentheses are balanced
 
-function balancedParens(str) {
+function balanced_parens(str) {
   let stack = []
   let open = { '{': '}', '[': ']', '(': ')' }
   let closed = { '}': true, ']': true, ')': true }
 
-  for (var i = 0; i < str.length; i ++) {
+  for (let i = 0; i < str.length; i ++) {
     let chr = str[i]
 
     if (open[chr]) {
@@ -22,7 +22,7 @@ function balancedParens(str) {
 // function that zips two arrays
 
 // map-reduce method
-function zipArrays(arr1, arr2) {
+function zip_arrays(arr1, arr2) {
   let combined = arr1.map( (e, i) => {
     return [e, arr2[i]]
   })
@@ -32,10 +32,24 @@ function zipArrays(arr1, arr2) {
 }
 
 // for loop method
-function zipArrays(arr1, arr2) {
+function zip_arrays(arr1, arr2) {
   let combined = []
   for (let i = 0; i < arr1.length; i++) {
     combined.push(arr1[i], arr2[i])
   }
   return combined
+}
+
+
+// function that finds longest string in array
+
+function longest_string(arr) {
+  let str_obj = {}
+
+  let longest = arr.reduce( (acc, curr) => {
+    return acc.length > curr.length ? acc : curr
+  })
+
+  str_obj[longest] = longest.length
+  return str_obj
 }
