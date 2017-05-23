@@ -17,3 +17,25 @@ function balancedParens(str) {
 
   return stack.length === 0
 }
+
+
+// function that zips two arrays
+
+// map-reduce method
+function zipArrays(arr1, arr2) {
+  let combined = arr1.map( (e, i) => {
+    return [e, arr2[i]]
+  })
+  return combined.reduce( (a, b) => {
+    return a.concat(b)
+  })
+}
+
+// for loop method
+function zipArrays(arr1, arr2) {
+  let combined = []
+  for (let i = 0; i < arr1.length; i++) {
+    combined.push(arr1[i], arr2[i])
+  }
+  return combined
+}
