@@ -62,3 +62,10 @@ function capitalize(str) {
     return char.charAt(0).toUpperCase() + char.substr(1).toLowerCase()
   }))
 }
+
+
+// function that counts specified char in string
+
+function count_char(str, char) {
+  return str.toLowerCase().split(char.toLowerCase()).length - 1
+}
