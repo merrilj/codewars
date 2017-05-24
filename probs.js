@@ -53,3 +53,12 @@ function longest_string(arr) {
   str_obj[longest] = longest.length
   return str_obj
 }
+
+
+// function that capitalizes a string
+
+function capitalize(str) {
+  return str.replace(/\w\S*/g, ( (char) => {
+    return char.charAt(0).toUpperCase() + char.substr(1).toLowerCase()
+  }))
+}
