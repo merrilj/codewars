@@ -69,3 +69,10 @@ function capitalize(str) {
 function count_char(str, char) {
   return str.toLowerCase().split(char.toLowerCase()).length - 1
 }
+
+
+// function that accumulates each char in a string
+
+function accum(str) {
+  return str.split('').map( (c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-')
+}
