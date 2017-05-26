@@ -76,3 +76,15 @@ function count_char(str, char) {
 function accum(str) {
   return str.split('').map( (c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-')
 }
+
+
+// function that prints odd numbers up to num specified
+
+function print_odds(num) {
+  let odds = []
+  for (let i = 0; i < num; i++) {
+    if (i % 2 !== 0)
+      odds.push(i)
+  }
+  return odds
+}
