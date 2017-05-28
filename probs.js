@@ -106,3 +106,15 @@ function find_largest(arr) {
   })
   return sorted[sorted.length - 1]
 }
+
+
+// fizz buzz function
+
+function fizz_buzz(num) {
+  let results = []
+  for (let i = 0; i < num.length; i++){
+    let f = i % 3 === 0, b = i % 5 === 0
+    results.push(f ? b ? 'FizzBuzz' : 'Fizz' : b ? 'Buzz' : i)
+  }
+  return results
+}
