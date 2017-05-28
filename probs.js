@@ -88,3 +88,21 @@ function print_odds(num) {
   }
   return odds
 }
+
+
+// function that finds largest element in array
+
+// Math.max method
+function find_largest(arr) {
+  return arr.reduce( (a, b) => {
+    return Math.max(a, b)
+  })
+}
+
+// sort reduce method
+function find_largest(arr) {
+  let sorted = arr.sort( (a, b) => {
+    return a - b
+  })
+  return sorted[sorted.length - 1]
+}
