@@ -118,3 +118,12 @@ function fizz_buzz(num) {
   }
   return results
 }
+
+
+// function that replaces dashes and undescores with camelCase
+
+function camelCase(str) {
+  return str.replace(/(-.)|(_.)/g, ( (el) => {
+    return el[1].toUpperCase()
+  }))
+}
