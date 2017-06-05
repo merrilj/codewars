@@ -127,3 +127,12 @@ function camelCase(str) {
     return el[1].toUpperCase()
   }))
 }
+
+
+// function that pulls object values and lists them out
+
+function list(names) {
+  let last = names.pop() || { name: '' }
+  let result = names.map(function(n) { return n.name }).join(', ')
+  return result ? result + ' & ' + last.name : last.name
+}
